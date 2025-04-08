@@ -85,7 +85,7 @@ export const logout = (req, res) => {
     res.cookie("jwt", "", { maxAge: 0 });
     res.status(200).json({ message: "Logged out successfully" });
   } catch (error) {
-    console.log("Error in logout controller", error)
+    console.log("Error in logout controller", error);
     res.status(500).json({ message: "Internal Server Error" });
   }
 };
@@ -106,7 +106,7 @@ export const updateProfile = async (req, res) => {
     res.status(200).json(updatedUser);
 
   } catch (error) {
-    console.log("Error in updateProfile controller", error)
+    console.log("Error in updateProfile controller", error);
     res.status(500).json({ message: "Internal Server Error" });
   }
 };
@@ -115,7 +115,7 @@ export const checkAuth = (req, res) => {
   try {
     res.status(200).json(req.user);
   } catch (error) {
-    console.log("Error in checkAuth controller", error)
+    console.log("Error in checkAuth controller", error);
     res.status(500).json({ message: "Internal Server Error" });
   }
 };
